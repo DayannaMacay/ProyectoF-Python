@@ -1,0 +1,134 @@
+<!-- Heredendo del template padre -->
+{% extends "core/base.html" %}
+
+<!--Carga archivos estaticos-->
+{% load static %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container text-center py-5">
+        <h1 class="display-3 text-white text-uppercase mb-3 animated slideInDown">Acerca de</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb justify-content-center text-uppercase mb-0">
+                <li class="breadcrumb-item"><a class="text-white" href="{% url 'home' %}">Inicio</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="{% url 'service' %}">Servicios</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="{% url 'contact' %}">Contacto</a></li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- About Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="d-flex flex-column">
+                    <img class="img-fluid w-75 align-self-end" src="{% static 'core/img/about.jpg' %}" alt="">
+                    <div class="w-50 bg-secondary p-5" style="margin-top: -25%;">
+                        <h1 class="text-uppercase text-primary mb-3">25 Años</h1>
+                        <h2 class="text-uppercase mb-0">Experiencia</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                <p class="d-inline-block bg-secondary text-primary py-1 px-4">Acerca de</p>
+                <h1 class="text-uppercase mb-4">Más que solo un corte de cabello. ¡Descubre más sobre nosotros!</h1>
+                <p>En nuestra barbería, no solo ofrecemos cortes de cabello excepcionales, sino que también brindamos una experiencia única. Nos enorgullece crear looks personalizados que reflejen tu estilo individual. Con un equipo de barberos y estilistas talentosos, estamos comprometidos con la excelencia en cada detalle.</p>
+                <p class="mb-4">En un ambiente acogedor y amigable, te invitamos a disfrutar de más que un simple corte de cabello. Descubre el arte de la barbería con nosotros y deja que tu estilo hable por sí mismo. ¡Bienvenido a una experiencia de cuidado personalizada y a medida!</p>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h3 class="text-uppercase mb-3">Desde 1999</h3>
+                        <p class="mb-0">Haciendo felices a nuestros clientes.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="text-uppercase mb-3">500+ clientes</h3>
+                        <p class="mb-0">Forma parte de esta gran comunidad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+
+<!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <p class="d-inline-block bg-secondary text-primary py-1 px-4">Nuestros Barberos de experiencia</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="team-item">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'core/img/team-1.jpg' %}" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary text-center p-4">
+                        <h5 class="text-uppercase">Miguel Pérez</h5>
+                        <span class="text-primary">Barbero Principal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="team-item">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'core/img/team-2.jpg' %}" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary text-center p-4">
+                        <h5 class="text-uppercase">Alejandro Mendoza</h5>
+                        <span class="text-primary">Estilista Senior</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="team-item">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'core/img/team-3.jpg' %}" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary text-center p-4">
+                        <h5 class="text-uppercase">Luis Torres</h5>
+                        <span class="text-primary">Barbero Cortes Modernos</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="team-item">
+                    <div class="team-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="{% static 'core/img/team-4.jpg' %}" alt="">
+                        <div class="team-social">
+                            <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-secondary text-center p-4">
+                        <h5 class="text-uppercase">Juan Hernández</h5>
+                        <span class="text-primary">Estilista Creativo y Colorista</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+{% endblock content %}
