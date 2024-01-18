@@ -29,31 +29,34 @@
                 <div class="bg-secondary p-5">
                     <p class="d-inline-block bg-dark text-primary py-1 px-4">Contáctanos</p>
                     <h1 class="text-uppercase mb-4">¿Tienes alguna pregunta? ¡Por favor, contáctanos!</h1>
-                    <form>
+
+                    <form action='' method='POST'>
+                        {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
+                                    {{contact_form.name}}
                                     <label for="name">Tu nombre</label>
                                 </div>
+                                {{contact_form.name.errors}}
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
+                                    {{contact_form.email}}
                                     <label for="email">Tu correo</label>
                                 </div>
+                                {{contact_form.email.errors}}
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control bg-transparent" id="subject" placeholder="Subject">
+                                    {{contact_form.affair}}
                                     <label for="subject">Asunto</label>
                                 </div>
+                                {{contact_form.affair.errors}}
                             </div>
                             <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control bg-transparent" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Mensaje</label>
-                                </div>
+                                {{contact_form.message}}
+                                {{contact_form.message.errors}}
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Enviar mensaje</button>
